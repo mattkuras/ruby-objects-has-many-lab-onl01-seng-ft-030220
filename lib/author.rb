@@ -6,6 +6,11 @@ class Author
   end
   
   def posts 
+    Post.all.map do |pos|
+      if pos.author == self 
+        pos 
+      end
+    end
   end
   
 end
